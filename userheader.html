@@ -1,0 +1,51 @@
+
+
+<div class="banner">
+		<!-- header -->
+		<div class="header">
+			<div class="container">
+				<div class="menu">
+					<a href="#" class="navicon"></a> 
+					<div class="toggle">
+						<ul class="toggle-menu">
+							<li><a href="userprofile.php" class="active"> My Profile</a></li>
+							<li><a href="userchangepassword.php" class="scroll"> Change Password</a></li>
+							<li><a href="userlogout.php" class="scroll"> Log out</a></li>
+						</ul>
+					</div> 
+				</div> 
+				<div class="logo">
+					<h3><a href="home.php">Pet Shelter</a>
+                    <a href="userprofile.php">
+                <?php
+
+                        @session_start();
+                        if (!isset($_SESSION["user_email"])) {
+                            echo $_SESSION['user_email'];
+
+                        }
+                         ?>
+                        </a>
+                        <a href="#"> Filter</a>
+                        
+                         
+
+    </h3>
+                    
+                                    
+                    
+				</div> 
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<!-- //header -->
+    <script>
+		$('.navicon').on('click', function (e) {
+		  e.preventDefault();
+		  $(this).toggleClass('navicon--active');
+		  $('.toggle').toggleClass('toggle--active');
+		});
+	</script>
+    
+
+           
